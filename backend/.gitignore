@@ -1,0 +1,36 @@
+ template for a Django project:
+
+gitignore
+Copy
+# Python-related
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+*.db
+*.sqlite3
+*.log
+
+# Django-related
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+db.sqlite3
+media/
+static/
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+
+# Django migrations
+*/migrations/*
