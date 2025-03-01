@@ -6,7 +6,14 @@ export default function Dashboard() {
 
   useEffect(() => {
     async function getData() {
-      await axios.get("/api/test");
+      await axios
+        .get(process.env.REACT_APP_API_URL + "/api/test")
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log("ERROR => ", error);
+        });
     }
 
     getData();
@@ -14,7 +21,7 @@ export default function Dashboard() {
 
   return (
     <div>
-      <div>{data}</div>
+      <div>{data?.status}</div>
       <div>Hello World!</div>
     </div>
   );
